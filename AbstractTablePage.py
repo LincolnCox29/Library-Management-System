@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QLabel, QTableWidget, QTableWidgetItem, QHeaderView, QPushButton, QHBoxLayout
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QModelIndex
 from PageTools import PageTools
 from library import library
 
@@ -39,3 +39,7 @@ class AbstractTablePage(QMainWindow, PageTools):
         table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
         table.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
         return table
+    
+    def _itemClicked(self, item : QModelIndex):
+        if item.row() != None and Qt.MouseButton.LeftButton:
+            self.pageView(self.infoPageType(self.tabularArray[item.row()]))

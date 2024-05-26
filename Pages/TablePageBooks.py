@@ -1,7 +1,8 @@
-from PyQt6.QtWidgets import QWidget, QTableWidgetItem, QHBoxLayout, QMenu, QTableWidget
+from PyQt6.QtWidgets import QWidget, QTableWidgetItem, QHBoxLayout, QMenu, QTableWidget, QAbstractItemView
 from library import library
 from AbstractTablePage import AbstractTablePage
 from Pages.AddBookPage import AddBookPage
+from Pages.BookInfoPage import BookInfoPage
 from clsBook import Book
 from PyQt6.QtCore import Qt, QPoint
 
@@ -9,6 +10,7 @@ class TablePageBook(AbstractTablePage):
     def __init__(self):
         self.columnCount = 7
         self.tabularArray = library.booksList
+        self.infoPageType = BookInfoPage
         super().__init__()
 
     def tableFilling(self, table):
@@ -34,8 +36,10 @@ class TablePageBook(AbstractTablePage):
         new_headers = ['Title', 'Author', 'Year', 'Genre', 'Number of pages', 'ISBN', 'Copies']
         table.setHorizontalHeaderLabels(new_headers)
         self.table : QTableWidget = table
+        self.table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.table.customContextMenuRequested.connect(self.showContextMenu)
+        table.clicked.connect(self._itemClicked)
         return table
     
     def buttonBur(self):
@@ -54,20 +58,23 @@ class TablePageBook(AbstractTablePage):
         contextMenu.exec(self.table.mapToGlobal(ClickPos))
 
     def addCopy(self, ClickPos):
-        book = self.table.itemAt(ClickPos).row()
-        library.booksList[book].appendCopy()
-        self.table.setItem(book, 6, QTableWidgetItem(str(library.booksList[book].copies)))
+        if self.table.itemAt(ClickPos) != None:
+            book = self.table.itemAt(ClickPos).row()
+            library.booksList[book].appendCopy()
+            self.table.setItem(book, 6, QTableWidgetItem(str(library.booksList[book].copies)))
         
     def delCopy(self, ClickPos):
-        book = self.table.itemAt(ClickPos).row()
-        library.booksList[book].delCopy()
-        if library.booksList[book].copies <= 0:
-            library.delBook(library.booksList[book])
-            self.table.removeRow(book)
-        else:
-            self.table.setItem(book, 6, QTableWidgetItem(str(library.booksList[book].copies)))
+        if self.table.itemAt(ClickPos) != None:
+            book = self.table.itemAt(ClickPos).row()
+            library.booksList[book].delCopy()
+            if library.booksList[book].copies <= 0:
+                library.delBook(library.booksList[book])
+                self.table.removeRow(book)
+            else:
+                self.table.setItem(book, 6, QTableWidgetItem(str(library.booksList[book].copies)))
 
     def delBook(self, ClickPos):
-        book = self.table.itemAt(ClickPos).row()
-        library.delBook(library.booksList[book])
-        self.table.removeRow(book)
+        if self.table.itemAt(ClickPos) != None:
+            book = self.table.itemAt(ClickPos).row()
+            library.delBook(library.booksList[book])
+            self.table.removeRow(book)
