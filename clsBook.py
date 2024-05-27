@@ -54,7 +54,7 @@ class Book:
         Year: {self.year}, 
         Genre: {self.genre}, 
         Page Count: {self.pageCount}, 
-        ISBN: {self.ISBN}, 
+        ISBN: {self._ISBN}, 
         Copies: {self.copies}'''
     
     def delCopy(self):

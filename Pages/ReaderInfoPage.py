@@ -35,6 +35,11 @@ class ReaderInfoPage(QMainWindow, PageTools):
         ]
         for field in fields:
             mainLayout.addWidget(self._textField(str(field[0]), str(field[1])))
+        backButton = self.defaultButton('Back', lambda: self.openReadersTable())
+        backButton.setFixedSize(100, 25)
+        mainLayout.addWidget(backButton)
+        for book in self._reader.booksList:
+            mainLayout.addWidget(QLabel(str(book)))
         return mainLayout
 
     def _textField(self, label : str, value : str):
