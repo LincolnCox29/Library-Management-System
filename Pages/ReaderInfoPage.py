@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import (
     QMainWindow, QVBoxLayout, QWidget, 
     QLabel, QTableWidget, QTableWidgetItem, 
     QHeaderView, QPushButton, QHBoxLayout, 
-    QComboBox,QLineEdit, QSizePolicy
+    QComboBox,QLineEdit, QSizePolicy, QScrollArea
 ) 
 from PyQt6.QtCore import Qt
 from genres import genres
@@ -17,9 +17,12 @@ class ReaderInfoPage(QMainWindow, PageTools):
         self._initUI()
 
     def _initUI(self):
+        scrollArea = QScrollArea(self)
+        scrollArea.setWidgetResizable(True)
         mainLayout = self._initMainLayout()
         central_widget = QWidget(self)
-        self.setCentralWidget(central_widget)
+        scrollArea.setWidget(central_widget)
+        self.setCentralWidget(scrollArea)
         mainLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         central_widget.setLayout(mainLayout)
 
@@ -38,7 +41,6 @@ class ReaderInfoPage(QMainWindow, PageTools):
         widget = QWidget()
         field = QHBoxLayout()
         field.setAlignment(Qt.AlignmentFlag.AlignLeft)
-        field.setSizeConstraint(QHBoxLayout.SizeConstraint.SetMinimumSize)
         field.addWidget(QLabel(f'{label}:'))
         field.addWidget(QLabel(value))
         widget.setLayout(field)
