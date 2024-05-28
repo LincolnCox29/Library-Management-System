@@ -35,9 +35,8 @@ class ReaderInfoPage(QMainWindow, PageTools):
         ]
         for field in fields:
             mainLayout.addWidget(self._textField(str(field[0]), str(field[1])))
-        backButton = self.defaultButton('Back', lambda: self.openReadersTable())
-        backButton.setFixedSize(100, 25)
-        mainLayout.addWidget(backButton)
+        mainLayout.addWidget(self._backButton())
+        mainLayout.addWidget(self._delReaderButton())
         for book in self._reader.booksList:
             mainLayout.addWidget(QLabel(str(book)))
         return mainLayout
@@ -50,3 +49,19 @@ class ReaderInfoPage(QMainWindow, PageTools):
         field.addWidget(QLabel(value))
         widget.setLayout(field)
         return widget
+
+    def _backButton(self):
+        backButton = self.defaultButton('Back', self.openReadersTable)
+        backButton.setFixedSize(100, 25)
+        return backButton
+    
+    def _delReaderButton(self):
+        delReaderButton = self.defaultButton('Del Reader', self._delReader)
+        delReaderButton.setFixedSize(100, 25)
+        return delReaderButton
+
+    def _delReader(self):
+        library.delReader(self._reader)
+        self.openReadersTable()
+
+
