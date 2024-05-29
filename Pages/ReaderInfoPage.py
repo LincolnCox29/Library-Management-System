@@ -2,10 +2,11 @@ from PyQt6.QtWidgets import (
     QMainWindow, QVBoxLayout, QWidget, 
     QLabel, QTableWidget, QTableWidgetItem, 
     QHeaderView, QPushButton, QHBoxLayout, 
-    QComboBox,QLineEdit, QSizePolicy, QScrollArea
+    QComboBox,QLineEdit, QSizePolicy, QScrollArea, QMenu
 ) 
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QPoint
 from genres import genres
+from clsBook import Book
 from clsReader import Reader
 from PageTools import PageTools
 from library import library
@@ -19,27 +20,27 @@ class ReaderInfoPage(QMainWindow, PageTools):
     def _initUI(self):
         scrollArea = QScrollArea(self)
         scrollArea.setWidgetResizable(True)
-        mainLayout = self._initMainLayout()
-        central_widget = QWidget(self)
-        scrollArea.setWidget(central_widget)
+        self.mainLayout = self._initMainLayout()
+        centralWidget = QWidget(self)
+        scrollArea.setWidget(centralWidget)
         self.setCentralWidget(scrollArea)
-        mainLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        central_widget.setLayout(mainLayout)
+        self.mainLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        centralWidget.setLayout(self.mainLayout)
 
     def _initMainLayout(self):
-        mainLayout = QVBoxLayout()
+        self.mainLayout = QVBoxLayout()
         fields = [
             ['Name', self._reader.name],
             ['Surname', self._reader.surname],
             ['Library card number', self._reader.libraryCardNumber]
         ]
         for field in fields:
-            mainLayout.addWidget(self._textField(str(field[0]), str(field[1])))
-        mainLayout.addWidget(self._backButton())
-        mainLayout.addWidget(self._delReaderButton())
+            self.mainLayout.addWidget(self._textField(str(field[0]), str(field[1])))
+        self.mainLayout.addWidget(self._backButton())
+        self.mainLayout.addWidget(self._delReaderButton())
         for book in self._reader.booksList:
-            mainLayout.addWidget(QLabel(str(book)))
-        return mainLayout
+            self.mainLayout.addWidget(self._bookLabel(book))
+        return self.mainLayout
 
     def _textField(self, label : str, value : str):
         widget = QWidget()
@@ -64,4 +65,18 @@ class ReaderInfoPage(QMainWindow, PageTools):
         library.delReader(self._reader)
         self.openReadersTable()
 
+    def _bookLabel(self, book : Book):
+        bookLabel = QLabel(str(book))
+        bookLabel.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        bookLabel.customContextMenuRequested.connect(lambda pos: self._bookLabelContextMenu(book, bookLabel, pos))
+        return bookLabel
 
+    def _bookLabelContextMenu(self, book : Book, label : QLabel, pos : QPoint):
+        contextMenu = QMenu(self)
+        contextMenu.addAction('Del Book').triggered.connect(lambda: self.returnBook(book, label))
+        contextMenu.exec(label.mapToGlobal(pos))
+
+    def returnBook(self, book : Book, label : QLabel):
+        self._reader.returnBook(library, book)
+        self.mainLayout.removeWidget(label)
+        label.deleteLater()

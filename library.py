@@ -36,6 +36,8 @@ library = Library(
                     Book("One Hundred Years of Solitude", "Gabriel García Márquez", 1967, "Magic realism", 417, 9780060883287, 1),
                     Book("The Picture of Dorian Gray", "Oscar Wilde", 1890, "Gothic", 254, 9780141439570, 1),
                     Book("War and Peace", "Leo Tolstoy", 1869, "Historical fiction", 1225, 9780143035008, 1),
+                    Book("Moby-Dick", "Herman Melville", 1851, "Adventure", 752, 9780142437247, 1),
+                    Book("The Bell Jar", "Sylvia Plath", 1963, "Semi-autobiographical", 244, 9780571081783, 1),
                 ]
             ),
             Reader(

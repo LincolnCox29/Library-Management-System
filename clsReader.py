@@ -47,7 +47,9 @@ class Reader():
     def returnBook(self, library, book):
         if book in self._booksList:
             self._booksList.remove(book)
-            if book.copies == 0:
+            if book not in library.booksList:
                 library.booksList.append(book)
             else:
-                book.appendCopy()
+                for i in range(len(library.booksList)):
+                    if book == library.booksList[i]:
+                        library.booksList[i].appendCopy()

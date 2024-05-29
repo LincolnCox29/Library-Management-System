@@ -7,7 +7,7 @@ class Book:
             year: int,
             genre: str,
             pageCount: int,
-            ISBN: int,
+            isbn: int,
             copies: int
             ):
         self._name = name
@@ -15,7 +15,7 @@ class Book:
         self._year = year
         self._genre = genre
         self._pageCount = pageCount
-        self._ISBN = ISBN
+        self._isbn = isbn
         self._copies = copies
 
     @property
@@ -40,7 +40,7 @@ class Book:
     
     @property
     def isbn(self):
-        return self._ISBN
+        return self._isbn
     
     @property
     def copies(self):
@@ -54,7 +54,7 @@ class Book:
         Year: {self.year}, 
         Genre: {self.genre}, 
         Page Count: {self.pageCount}, 
-        ISBN: {self._ISBN}, 
+        ISBN: {self._isbn}, 
         Copies: {self.copies}'''
     
     def delCopy(self):
@@ -70,6 +70,6 @@ class Book:
                 self._author == value.author and
                 self._year == value.year and
                 self._genre == value.genre and
-                self._ISBN == value.ISBN
+                self._isbn == value.isbn
                 )
         return False
