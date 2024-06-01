@@ -3,7 +3,7 @@ from PyQt6.QtCore import Qt, QModelIndex
 from PageTools import PageTools
 from library import library
 
-class AbstractTablePage(QMainWindow, PageTools):
+class AbstractTablePage(PageTools):
     def __init__(self):
         super().__init__()
         self.initThisWindow()

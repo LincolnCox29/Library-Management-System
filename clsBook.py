@@ -73,3 +73,14 @@ class Book:
                 self._isbn == value.isbn
                 )
         return False
+    
+    def to_dict(self):
+        return {
+            'name': self.name,
+            'author': self.author,
+            'year': self.year,
+            'genre': self.genre,
+            'pageCount': self.pageCount,
+            'isbn': self.isbn,
+            'copies': self.copies
+        }

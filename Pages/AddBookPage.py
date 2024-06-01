@@ -10,7 +10,7 @@ from clsBook import Book
 from PageTools import PageTools
 from library import library
 
-class AddBookPage(QMainWindow, PageTools):
+class AddBookPage(PageTools):
     def __init__(self):
         super().__init__()
         self.title = 'Title'

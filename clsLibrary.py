@@ -41,3 +41,9 @@ class Library():
 
     def searchReader(self, attribute_name : str, value):
         self.__searchAny('readersList', attribute_name, value)
+
+    def to_dict(self):
+        return {
+            'booksList': [book.to_dict() for book in self.booksList],
+            'readersList': [reader.to_dict() for reader in self.readersList]
+        }

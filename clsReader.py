@@ -53,3 +53,11 @@ class Reader():
                 for i in range(len(library.booksList)):
                     if book == library.booksList[i]:
                         library.booksList[i].appendCopy()
+
+    def to_dict(self):
+        return {
+            'name': self.name,
+            'surname': self.surname,
+            'card_number': self.libraryCardNumber,
+            'booksList': [book.to_dict() for book in self.booksList]
+        }

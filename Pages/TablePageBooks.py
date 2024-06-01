@@ -4,9 +4,10 @@ from AbstractTablePage import AbstractTablePage
 from Pages.AddBookPage import AddBookPage
 from Pages.BookInfoPage import BookInfoPage
 from clsBook import Book
+from PageTools import PageTools
 from PyQt6.QtCore import Qt, QPoint
 
-class TablePageBook(AbstractTablePage):
+class TablePageBook(AbstractTablePage, PageTools):
     def __init__(self):
         self.columnCount = 7
         self.tabularArray = library.booksList

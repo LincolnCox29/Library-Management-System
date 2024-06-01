@@ -1,8 +1,8 @@
-from PyQt6.QtWidgets import QPushButton, QMainWindow, QHeaderView, QTableWidget, QWidget, QLineEdit, QLabel, QHBoxLayout
-from library import library
+from PyQt6.QtWidgets import QPushButton, QMainWindow, QHeaderView, QTableWidget, QWidget, QLineEdit, QLabel, QHBoxLayout, QMessageBox
+from library import library, saveLibraryToJson
 from PyQt6.QtCore import Qt
 
-class PageTools():
+class PageTools(QMainWindow):
 
     def initThisWindow(self):
         self.setWindowTitle("PyQtLibrary")
@@ -54,3 +54,6 @@ class PageTools():
         field.addWidget(textbox)
         widget.setLayout(field)
         return widget
+    
+    def closeEvent(self, event):
+        saveLibraryToJson()

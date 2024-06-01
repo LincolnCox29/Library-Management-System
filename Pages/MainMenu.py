@@ -4,7 +4,7 @@ from Pages.TablePageReaders import TablePageReaders
 from Pages.TablePageBooks import TablePageBook
 from PageTools import PageTools
 
-class MainMenu(QMainWindow, PageTools):
+class MainMenu(PageTools):
     def __init__(self):
         super().__init__()
         self.initThisWindow()

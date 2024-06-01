@@ -1,0 +1,236 @@
+{
+    "booksList": [
+        {
+            "name": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "year": 1960,
+            "genre": "Fiction",
+            "pageCount": 281,
+            "isbn": 9780061120084,
+            "copies": 10
+        },
+        {
+            "name": "1984",
+            "author": "George Orwell",
+            "year": 1949,
+            "genre": "Dystopian",
+            "pageCount": 328,
+            "isbn": 9780451524935,
+            "copies": 5
+        },
+        {
+            "name": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "year": 1925,
+            "genre": "Fiction",
+            "pageCount": 180,
+            "isbn": 9780743273565,
+            "copies": 8
+        },
+        {
+            "name": "The Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "year": 1951,
+            "genre": "Fiction",
+            "pageCount": 224,
+            "isbn": 9780316769488,
+            "copies": 8
+        },
+        {
+            "name": "To the Lighthouse",
+            "author": "Virginia Woolf",
+            "year": 1927,
+            "genre": "Modernist",
+            "pageCount": 209,
+            "isbn": 9780156907392,
+            "copies": 3
+        },
+        {
+            "name": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "year": 1813,
+            "genre": "Romance",
+            "pageCount": 279,
+            "isbn": 9780486284736,
+            "copies": 6
+        },
+        {
+            "name": "Moby-Dick",
+            "author": "Herman Melville",
+            "year": 1851,
+            "genre": "Adventure",
+            "pageCount": 752,
+            "isbn": 9780142437247,
+            "copies": 4
+        },
+        {
+            "name": "The Hobbit",
+            "author": "J.R.R. Tolkien",
+            "year": 1937,
+            "genre": "Fantasy",
+            "pageCount": 310,
+            "isbn": 9780547928227,
+            "copies": 9
+        },
+        {
+            "name": "The Lord of the Rings",
+            "author": "J.R.R. Tolkien",
+            "year": 1954,
+            "genre": "Fantasy",
+            "pageCount": 1178,
+            "isbn": 9780544003415,
+            "copies": 12
+        },
+        {
+            "name": "Crime and Punishment",
+            "author": "Fyodor Dostoevsky",
+            "year": 1866,
+            "genre": "Philosophical Fiction",
+            "pageCount": 671,
+            "isbn": 9780679734505,
+            "copies": 5
+        },
+        {
+            "name": "The Picture of Dorian Gray",
+            "author": "Oscar Wilde",
+            "year": 1890,
+            "genre": "Gothic",
+            "pageCount": 254,
+            "isbn": 9780141439570,
+            "copies": 5
+        },
+        {
+            "name": "War and Peace",
+            "author": "Leo Tolstoy",
+            "year": 1869,
+            "genre": "Historical fiction",
+            "pageCount": 1225,
+            "isbn": 9780143035008,
+            "copies": 10
+        },
+        {
+            "name": "The Brothers Karamazov",
+            "author": "Fyodor Dostoevsky",
+            "year": 1880,
+            "genre": "Philosophical fiction",
+            "pageCount": 796,
+            "isbn": 9780374528379,
+            "copies": 6
+        },
+        {
+            "name": "Anna Karenina",
+            "author": "Leo Tolstoy",
+            "year": 1878,
+            "genre": "Realist novel",
+            "pageCount": 864,
+            "isbn": 9780143035008,
+            "copies": 8
+        },
+        {
+            "name": "Don Quixote",
+            "author": "Miguel de Cervantes",
+            "year": 1605,
+            "genre": "Novel",
+            "pageCount": 863,
+            "isbn": 9780142437230,
+            "copies": 11
+        },
+        {
+            "name": "Les Mis\u00e9rables",
+            "author": "Victor Hugo",
+            "year": 1862,
+            "genre": "Historical novel",
+            "pageCount": 1232,
+            "isbn": 9780140444308,
+            "copies": 9
+        },
+        {
+            "name": "Brave New World",
+            "author": "Aldous Huxley",
+            "year": 1932,
+            "genre": "Dystopian",
+            "pageCount": 288,
+            "isbn": 9780060850524,
+            "copies": 5
+        },
+        {
+            "name": "One Hundred Years of Solitude",
+            "author": "Gabriel Garc\u00eda M\u00e1rquez",
+            "year": 1967,
+            "genre": "Magic realism",
+            "pageCount": 417,
+            "isbn": 9780060883287,
+            "copies": 13
+        }
+    ],
+    "readersList": [
+        {
+            "name": "Charles",
+            "surname": "Norton",
+            "card_number": 2,
+            "booksList": [
+                {
+                    "name": "One Hundred Years of Solitude",
+                    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+                    "year": 1967,
+                    "genre": "Magic realism",
+                    "pageCount": 417,
+                    "isbn": 9780060883287,
+                    "copies": 1
+                },
+                {
+                    "name": "The Picture of Dorian Gray",
+                    "author": "Oscar Wilde",
+                    "year": 1890,
+                    "genre": "Gothic",
+                    "pageCount": 254,
+                    "isbn": 9780141439570,
+                    "copies": 1
+                },
+                {
+                    "name": "War and Peace",
+                    "author": "Leo Tolstoy",
+                    "year": 1869,
+                    "genre": "Historical fiction",
+                    "pageCount": 1225,
+                    "isbn": 9780143035008,
+                    "copies": 1
+                },
+                {
+                    "name": "Moby-Dick",
+                    "author": "Herman Melville",
+                    "year": 1851,
+                    "genre": "Adventure",
+                    "pageCount": 752,
+                    "isbn": 9780142437247,
+                    "copies": 1
+                },
+                {
+                    "name": "The Bell Jar",
+                    "author": "Sylvia Plath",
+                    "year": 1963,
+                    "genre": "Semi-autobiographical",
+                    "pageCount": 244,
+                    "isbn": 9780571081783,
+                    "copies": 1
+                }
+            ]
+        },
+        {
+            "name": "Wendy",
+            "surname": "Neal",
+            "card_number": 3,
+            "booksList": [
+                {
+                    "name": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "year": 1925,
+                    "genre": "Fiction",
+                    "pageCount": 180,
+                    "isbn": 9780743273565,
+                    "copies": 1
+                }
+            ]
+        }
+    ]
+}

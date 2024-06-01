@@ -4,7 +4,7 @@ from clsReader import Reader
 from PageTools import PageTools
 from library import library
 
-class AddReaderPage(QMainWindow, PageTools):
+class AddReaderPage(PageTools):
     def __init__(self):
         super().__init__()
         self.name = 'Name'

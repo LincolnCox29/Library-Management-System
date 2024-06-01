@@ -11,7 +11,7 @@ from clsReader import Reader
 from PageTools import PageTools
 from library import library
 
-class ReaderInfoPage(QMainWindow, PageTools):
+class ReaderInfoPage(PageTools):
     def __init__(self, reader : Reader):
         super().__init__()
         self._reader = reader

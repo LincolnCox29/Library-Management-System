@@ -8,9 +8,10 @@ from Pages.ReaderInfoPage import ReaderInfoPage
 from PyQt6.QtCore import Qt, QPoint, QModelIndex
 from Pages.AddReaderPage import AddReaderPage
 from AbstractTablePage import AbstractTablePage
+from PageTools import PageTools
 from library import library
 
-class TablePageReaders(AbstractTablePage):
+class TablePageReaders(AbstractTablePage, PageTools):
     def __init__(self):
         self.columnCount = 3
         self.tabularArray = library.readersList
