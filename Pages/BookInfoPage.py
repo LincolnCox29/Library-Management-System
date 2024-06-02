@@ -14,6 +14,7 @@ class BookInfoPage(PageTools):
     def __init__(self, book : Book):
         super().__init__()
         self._book = book
+        self.readerMap = {}
         self._initUI()
 
     def _initUI(self):
@@ -30,12 +31,31 @@ class BookInfoPage(PageTools):
         mainLayout.addWidget(self.backButton())
         mainLayout.addWidget(self.delCopyButton())
         mainLayout.addWidget(self.addCopyButton())
+        mainLayout.addWidget(self.giveBookWidget())
         return mainLayout
     
     def backButton(self):
         backButton = self.defaultButton('Back', self.openBooksTable)
         backButton.setFixedSize(100, 25)
         return backButton
+
+    def giveBookWidget(self):
+        self.readerComboBox = QComboBox()
+        for index, reader in enumerate(library.readersList):
+            if not reader.checkingBookForAvailability(self._book):
+                self.readerComboBox.addItem(str(reader))
+                self.readerMap[index] = reader
+        self.readerComboBox.activated.connect(self.addReaderToGiveBookWidget)
+        return self.readerComboBox
+    
+    def addReaderToGiveBookWidget(self, index):
+        selectedReader = self.readerMap.get(index)
+        if selectedReader:
+            selectedReader.takeBook(library, self._book)
+            self.bookText.setText(str(self._book))
+            self.readerComboBox.activated.disconnect(self.addReaderToGiveBookWidget)
+            self.readerComboBox.removeItem(index)
+            self.readerComboBox.activated.connect(self.addReaderToGiveBookWidget)
     
     def addCopyButton(self):
         addCopyButton = self.defaultButton('Add Copy', self._addCopy)

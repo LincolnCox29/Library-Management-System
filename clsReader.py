@@ -29,20 +29,17 @@ class Reader():
         return self._booksList
     
     def __str__(self) -> str:
-        books_str = ', '.join(str(book) for book in self.booksList)
         return f'''
         Reader: {self.name} {self.surname}, 
-        Library Card Number: {self.libraryCardNumber}, 
-        Books: {books_str}'''
+        Library Card Number: {self.libraryCardNumber}'''
     
     def takeBook(self, library, book):
-        if book not in self._booksList:
-            if book in library.booksList:
-                self._booksList.append(book)
-                if book.copies == 1:
-                    library.booksList.remove(book)
-                else:
-                    book.delCopy()
+        if book not in self._booksList and book in library.booksList:
+            self._booksList.append(book.toBookWithOneCopy())
+            if book.copies == 1:
+                library.booksList.remove(book)
+            else:
+                book.delCopy()
 
     def returnBook(self, library, book):
         if book in self._booksList:
@@ -61,3 +58,9 @@ class Reader():
             'card_number': self.libraryCardNumber,
             'booksList': [book.to_dict() for book in self.booksList]
         }
+    
+    def checkingBookForAvailability(self, inpBook):
+        for book in self.booksList:
+            if book == inpBook:
+                return True
+        return False

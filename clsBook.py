@@ -84,3 +84,6 @@ class Book:
             'isbn': self.isbn,
             'copies': self.copies
         }
+    
+    def toBookWithOneCopy(self):
+        return Book(self.name, self.author, self.year, self.genre, self.pageCount, self.isbn, 1)

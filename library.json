@@ -16,7 +16,7 @@
             "genre": "Dystopian",
             "pageCount": 328,
             "isbn": 9780451524935,
-            "copies": 5
+            "copies": 4
         },
         {
             "name": "The Great Gatsby",
@@ -160,62 +160,10 @@
             "genre": "Magic realism",
             "pageCount": 417,
             "isbn": 9780060883287,
-            "copies": 13
+            "copies": 12
         }
     ],
     "readersList": [
-        {
-            "name": "Charles",
-            "surname": "Norton",
-            "card_number": 2,
-            "booksList": [
-                {
-                    "name": "One Hundred Years of Solitude",
-                    "author": "Gabriel Garc\u00eda M\u00e1rquez",
-                    "year": 1967,
-                    "genre": "Magic realism",
-                    "pageCount": 417,
-                    "isbn": 9780060883287,
-                    "copies": 1
-                },
-                {
-                    "name": "The Picture of Dorian Gray",
-                    "author": "Oscar Wilde",
-                    "year": 1890,
-                    "genre": "Gothic",
-                    "pageCount": 254,
-                    "isbn": 9780141439570,
-                    "copies": 1
-                },
-                {
-                    "name": "War and Peace",
-                    "author": "Leo Tolstoy",
-                    "year": 1869,
-                    "genre": "Historical fiction",
-                    "pageCount": 1225,
-                    "isbn": 9780143035008,
-                    "copies": 1
-                },
-                {
-                    "name": "Moby-Dick",
-                    "author": "Herman Melville",
-                    "year": 1851,
-                    "genre": "Adventure",
-                    "pageCount": 752,
-                    "isbn": 9780142437247,
-                    "copies": 1
-                },
-                {
-                    "name": "The Bell Jar",
-                    "author": "Sylvia Plath",
-                    "year": 1963,
-                    "genre": "Semi-autobiographical",
-                    "pageCount": 244,
-                    "isbn": 9780571081783,
-                    "copies": 1
-                }
-            ]
-        },
         {
             "name": "Wendy",
             "surname": "Neal",
@@ -228,6 +176,24 @@
                     "genre": "Fiction",
                     "pageCount": 180,
                     "isbn": 9780743273565,
+                    "copies": 1
+                },
+                {
+                    "name": "1984",
+                    "author": "George Orwell",
+                    "year": 1949,
+                    "genre": "Dystopian",
+                    "pageCount": 328,
+                    "isbn": 9780451524935,
+                    "copies": 1
+                },
+                {
+                    "name": "One Hundred Years of Solitude",
+                    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+                    "year": 1967,
+                    "genre": "Magic realism",
+                    "pageCount": 417,
+                    "isbn": 9780060883287,
                     "copies": 1
                 }
             ]
