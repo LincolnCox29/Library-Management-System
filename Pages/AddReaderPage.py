@@ -42,4 +42,4 @@ class AddReaderPage(PageTools):
             case 'Surname':
                 self.surname = text
             case 'Card number':
-                self.libraryCardNumber
+                self.libraryCardNumber = int(text)

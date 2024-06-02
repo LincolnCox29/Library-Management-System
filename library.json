@@ -224,6 +224,12 @@
                     "copies": 1
                 }
             ]
+        },
+        {
+            "name": "Chris",
+            "surname": "Nelson",
+            "card_number": 4,
+            "booksList": []
         }
     ]
 }
