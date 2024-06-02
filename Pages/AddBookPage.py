@@ -85,5 +85,5 @@ class AddBookPage(PageTools):
             case 'ISBN':
                 self.isbn = text
             case 'Copies':
-                self.copies = text
+                self.copies = int(text)
     # endregion

@@ -25,7 +25,7 @@
             "genre": "Fiction",
             "pageCount": 180,
             "isbn": 9780743273565,
-            "copies": 8
+            "copies": 9
         },
         {
             "name": "The Catcher in the Rye",
@@ -70,7 +70,7 @@
             "genre": "Fantasy",
             "pageCount": 310,
             "isbn": 9780547928227,
-            "copies": 9
+            "copies": 8
         },
         {
             "name": "The Lord of the Rings",
@@ -124,7 +124,7 @@
             "genre": "Realist novel",
             "pageCount": 864,
             "isbn": 9780143035008,
-            "copies": 8
+            "copies": 7
         },
         {
             "name": "Don Quixote",
@@ -160,7 +160,25 @@
             "genre": "Magic realism",
             "pageCount": 417,
             "isbn": 9780060883287,
-            "copies": 12
+            "copies": 13
+        },
+        {
+            "name": "\"The Great Gatsby\"",
+            "author": "\"F. Scott Fitzgerald\"",
+            "year": "1925",
+            "genre": "Adventure",
+            "pageCount": "281",
+            "isbn": "9780061120084",
+            "copies": "29"
+        },
+        {
+            "name": "Dracula",
+            "author": "Bram Stoker",
+            "year": "1897",
+            "genre": "Horror",
+            "pageCount": "418",
+            "isbn": "9780141439846",
+            "copies": 4
         }
     ],
     "readersList": [
@@ -169,15 +187,6 @@
             "surname": "Neal",
             "card_number": 3,
             "booksList": [
-                {
-                    "name": "The Great Gatsby",
-                    "author": "F. Scott Fitzgerald",
-                    "year": 1925,
-                    "genre": "Fiction",
-                    "pageCount": 180,
-                    "isbn": 9780743273565,
-                    "copies": 1
-                },
                 {
                     "name": "1984",
                     "author": "George Orwell",
@@ -188,12 +197,30 @@
                     "copies": 1
                 },
                 {
-                    "name": "One Hundred Years of Solitude",
-                    "author": "Gabriel Garc\u00eda M\u00e1rquez",
-                    "year": 1967,
-                    "genre": "Magic realism",
-                    "pageCount": 417,
-                    "isbn": 9780060883287,
+                    "name": "Anna Karenina",
+                    "author": "Leo Tolstoy",
+                    "year": 1878,
+                    "genre": "Realist novel",
+                    "pageCount": 864,
+                    "isbn": 9780143035008,
+                    "copies": 1
+                },
+                {
+                    "name": "The Hobbit",
+                    "author": "J.R.R. Tolkien",
+                    "year": 1937,
+                    "genre": "Fantasy",
+                    "pageCount": 310,
+                    "isbn": 9780547928227,
+                    "copies": 1
+                },
+                {
+                    "name": "Dracula",
+                    "author": "Bram Stoker",
+                    "year": "1897",
+                    "genre": "Horror",
+                    "pageCount": "418",
+                    "isbn": "9780141439846",
                     "copies": 1
                 }
             ]
