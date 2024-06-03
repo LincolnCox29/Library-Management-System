@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import (
     QMainWindow, QVBoxLayout, QWidget, 
     QLabel, QTableWidget, QTableWidgetItem, 
     QHeaderView, QPushButton, QHBoxLayout, 
-    QComboBox,QLineEdit
+    QComboBox,QLineEdit, QSizePolicy
 ) 
 from PyQt6.QtCore import Qt
 from genres import genres
@@ -41,6 +41,8 @@ class BookInfoPage(PageTools):
 
     def giveBookWidget(self):
         self.readerComboBox = QComboBox()
+        self.readerComboBox.setPlaceholderText('Give the book to the reader')
+        self.readerComboBox.setFixedWidth(200)
         for index, reader in enumerate(library.readersList):
             if not reader.checkingBookForAvailability(self._book):
                 self.readerComboBox.addItem(str(reader))
@@ -52,10 +54,7 @@ class BookInfoPage(PageTools):
         selectedReader = self.readerMap.get(index)
         if selectedReader:
             selectedReader.takeBook(library, self._book)
-            self.bookText.setText(str(self._book))
-            self.readerComboBox.activated.disconnect(self.addReaderToGiveBookWidget)
-            self.readerComboBox.removeItem(index)
-            self.readerComboBox.activated.connect(self.addReaderToGiveBookWidget)
+            self.openBooksTable()
     
     def addCopyButton(self):
         addCopyButton = self.defaultButton('Add Copy', self._addCopy)

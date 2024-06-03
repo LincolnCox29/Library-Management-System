@@ -10,15 +10,6 @@
             "copies": 10
         },
         {
-            "name": "1984",
-            "author": "George Orwell",
-            "year": 1949,
-            "genre": "Dystopian",
-            "pageCount": 328,
-            "isbn": 9780451524935,
-            "copies": 4
-        },
-        {
             "name": "The Great Gatsby",
             "author": "F. Scott Fitzgerald",
             "year": 1925,
@@ -43,7 +34,7 @@
             "genre": "Modernist",
             "pageCount": 209,
             "isbn": 9780156907392,
-            "copies": 3
+            "copies": 2
         },
         {
             "name": "Pride and Prejudice",
@@ -61,7 +52,7 @@
             "genre": "Adventure",
             "pageCount": 752,
             "isbn": 9780142437247,
-            "copies": 4
+            "copies": 3
         },
         {
             "name": "The Hobbit",
@@ -70,7 +61,7 @@
             "genre": "Fantasy",
             "pageCount": 310,
             "isbn": 9780547928227,
-            "copies": 8
+            "copies": 9
         },
         {
             "name": "The Lord of the Rings",
@@ -124,7 +115,7 @@
             "genre": "Realist novel",
             "pageCount": 864,
             "isbn": 9780143035008,
-            "copies": 7
+            "copies": 8
         },
         {
             "name": "Don Quixote",
@@ -151,7 +142,7 @@
             "genre": "Dystopian",
             "pageCount": 288,
             "isbn": 9780060850524,
-            "copies": 5
+            "copies": 4
         },
         {
             "name": "One Hundred Years of Solitude",
@@ -188,39 +179,21 @@
             "card_number": 3,
             "booksList": [
                 {
-                    "name": "1984",
-                    "author": "George Orwell",
-                    "year": 1949,
-                    "genre": "Dystopian",
-                    "pageCount": 328,
-                    "isbn": 9780451524935,
+                    "name": "Moby-Dick",
+                    "author": "Herman Melville",
+                    "year": 1851,
+                    "genre": "Adventure",
+                    "pageCount": 752,
+                    "isbn": 9780142437247,
                     "copies": 1
                 },
                 {
-                    "name": "Anna Karenina",
-                    "author": "Leo Tolstoy",
-                    "year": 1878,
-                    "genre": "Realist novel",
-                    "pageCount": 864,
-                    "isbn": 9780143035008,
-                    "copies": 1
-                },
-                {
-                    "name": "The Hobbit",
-                    "author": "J.R.R. Tolkien",
-                    "year": 1937,
-                    "genre": "Fantasy",
-                    "pageCount": 310,
-                    "isbn": 9780547928227,
-                    "copies": 1
-                },
-                {
-                    "name": "Dracula",
-                    "author": "Bram Stoker",
-                    "year": "1897",
-                    "genre": "Horror",
-                    "pageCount": "418",
-                    "isbn": "9780141439846",
+                    "name": "To the Lighthouse",
+                    "author": "Virginia Woolf",
+                    "year": 1927,
+                    "genre": "Modernist",
+                    "pageCount": 209,
+                    "isbn": 9780156907392,
                     "copies": 1
                 }
             ]
@@ -229,7 +202,42 @@
             "name": "Chris",
             "surname": "Nelson",
             "card_number": 4,
-            "booksList": []
+            "booksList": [
+                {
+                    "name": "Brave New World",
+                    "author": "Aldous Huxley",
+                    "year": 1932,
+                    "genre": "Dystopian",
+                    "pageCount": 288,
+                    "isbn": 9780060850524,
+                    "copies": 1
+                }
+            ]
+        },
+        {
+            "name": "Richard",
+            "surname": "Evans",
+            "card_number": 5,
+            "booksList": [
+                {
+                    "name": "Dracula",
+                    "author": "Bram Stoker",
+                    "year": "1897",
+                    "genre": "Horror",
+                    "pageCount": "418",
+                    "isbn": "9780141439846",
+                    "copies": 1
+                },
+                {
+                    "name": "1984",
+                    "author": "George Orwell",
+                    "year": 1949,
+                    "genre": "Dystopian",
+                    "pageCount": 328,
+                    "isbn": 9780451524935,
+                    "copies": 1
+                }
+            ]
         }
     ]
 }
